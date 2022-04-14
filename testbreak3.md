@@ -1,4 +1,4 @@
 # Title
 ()text[]
-![Happy Face]()
-[Bad Link]()
+![Happy Face](link1)
+[Bad Link](link2)
