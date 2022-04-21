@@ -17,7 +17,22 @@ public class MarkdownParseTest { //name of test class
         ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file.md");
         String content = Files.readString(fileName);
         assertEquals(List.of("https://something.com","some-thing.html"),
-        MarkdownParse.getLinks(content));
-        
+        MarkdownParse.getLinks(content));      
+    }
+    @Test
+    public void testBreak2() throws IOException{
+        Path fileName = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\testbreak2.md");
+        String content = Files.readString(fileName);
+        assertEquals(List.of(""),
+        MarkdownParse.getLinks(content));      
+    }
+    @Test
+    public void testBreak3() throws IOException{
+        Path fileName = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\testbreak3.md");
+        String content = Files.readString(fileName);
+        assertEquals(List.of("link2"),
+        MarkdownParse.getLinks(content));      
     }
 }
