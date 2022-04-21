@@ -35,4 +35,42 @@ public class MarkdownParseTest { //name of test class
         assertEquals(List.of("link2"),
         MarkdownParse.getLinks(content));      
     }
+    @Test
+    public void testallTestFiles() throws IOException{
+        Path fileName = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file2.md");
+        Path fileName1 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file3.md");
+        Path fileName2 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file4.md");
+        Path fileName3 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file5.md");
+        Path fileName4 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file6.md");
+        Path fileName5 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file7.md");
+        Path fileName6 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file8.md");
+        String content = Files.readString(fileName);
+        String content2 = Files.readString(fileName1);
+        String content3 = Files.readString(fileName2);
+        String content4 = Files.readString(fileName3);
+        String content5 = Files.readString(fileName4);
+        String content6 = Files.readString(fileName5);
+        String content7 = Files.readString(fileName6);
+        assertEquals(List.of("https://something.com", "some-page.html"),
+        MarkdownParse.getLinks(content));      
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content2));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content3));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content4));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content5));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content6));  
+        assertEquals(List.of("a link on the first line"),
+        MarkdownParse.getLinks(content7));  
+    }
 }
