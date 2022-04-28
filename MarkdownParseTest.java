@@ -76,17 +76,17 @@ public class MarkdownParseTest { //name of test class
      @Test
     public void testotherFiles() throws IOException{ //test files from other repositories 
         Path fileName = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Incomplete.md");
+        ("Incomplete.md");
         Path fileName1 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Empty.md");
+        ("Empty.md");
         Path fileName2 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\farapart.md");
+        ("farapart.md");
         Path fileName3 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test3.md");
+        ("Test3.md");
         Path fileName4 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test1.md");
+        ("Test1.md");
         Path fileName5 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test2.md");
+        ("Test2.md");
         String content = Files.readString(fileName);
         String content2 = Files.readString(fileName1);
         String content3 = Files.readString(fileName2);
