@@ -73,4 +73,39 @@ public class MarkdownParseTest { //name of test class
         assertEquals(List.of("a link on the first line"),
         MarkdownParse.getLinks(content7));  
     }
+     @Test
+    public void testotherFiles() throws IOException{ //test files from other repositories 
+        Path fileName = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Incomplete.md");
+        Path fileName1 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Empty.md");
+        Path fileName2 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\farapart.md");
+        Path fileName3 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test3.md");
+        Path fileName4 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test1.md");
+        Path fileName5 = Path.of
+        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\Test2.md");
+        String content = Files.readString(fileName);
+        String content2 = Files.readString(fileName1);
+        String content3 = Files.readString(fileName2);
+        String content4 = Files.readString(fileName3);
+        String content5 = Files.readString(fileName4);
+        String content6 = Files.readString(fileName5);
+        assertEquals(List.of("https://google.com"),
+        MarkdownParse.getLinks(content));      
+        assertEquals(List.of("https://google.com","","https://google.com"),
+        MarkdownParse.getLinks(content2));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content3));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content4));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content5));  
+        assertEquals(List.of(),
+        MarkdownParse.getLinks(content6));  
+        assertEquals(List.of("a link on the first line"),
+        MarkdownParse.getLinks(content7));  
+    }
 }
