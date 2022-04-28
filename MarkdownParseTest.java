@@ -10,7 +10,7 @@ public class MarkdownParseTest { //name of test class
     public void addition() { //name denotes we are testing addition
         assertEquals(2, 1 + 1); //tests if 2 = 1 + 1
     }
-
+/*
     @Test
     public void testGetLinks() throws IOException{
         Path fileName = Path.of
@@ -73,6 +73,7 @@ public class MarkdownParseTest { //name of test class
         assertEquals(List.of("a link on the first line"),
         MarkdownParse.getLinks(content7));  
     }
+    */
      @Test
     public void testotherFiles() throws IOException{ //test files from other repositories 
         Path fileName = Path.of
