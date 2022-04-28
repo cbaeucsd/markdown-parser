@@ -96,7 +96,7 @@ public class MarkdownParseTest { //name of test class
         String content6 = Files.readString(fileName5);
         assertEquals(List.of("https://google.com"),
         MarkdownParse.getLinks(content));      
-        assertEquals(List.of("https://google.com","","https://google.com"),
+        assertEquals(List.of("https://google.com", "https://google.com"),
         MarkdownParse.getLinks(content2));  
         assertEquals(List.of(),
         MarkdownParse.getLinks(content3));  
