@@ -101,11 +101,10 @@ public class MarkdownParseTest { //name of test class
         MarkdownParse.getLinks(content3));  
         assertEquals(List.of(),
         MarkdownParse.getLinks(content4));  
-        assertEquals(List.of(),
+        assertEquals(List.of("http://nbastreams.site","https://www.markdownguide.org/basic-syntax/"),
         MarkdownParse.getLinks(content5));  
         assertEquals(List.of(),
         MarkdownParse.getLinks(content6));  
-        assertEquals(List.of("a link on the first line"),
-        MarkdownParse.getLinks(content7));  
+
     }
 }
