@@ -14,7 +14,7 @@ public class MarkdownParseTest { //name of test class
     @Test
     public void testGetLinks() throws IOException{
         Path fileName = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file.md");
+        ("test-file.md");
         String content = Files.readString(fileName);
         assertEquals(List.of("https://something.com","some-thing.html"),
         MarkdownParse.getLinks(content));      
@@ -22,7 +22,7 @@ public class MarkdownParseTest { //name of test class
     @Test
     public void testBreak2() throws IOException{
         Path fileName = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\testbreak2.md");
+        ("testbreak2.md");
         String content = Files.readString(fileName);
         assertEquals(List.of(""),
         MarkdownParse.getLinks(content));      
@@ -30,7 +30,7 @@ public class MarkdownParseTest { //name of test class
     @Test
     public void testBreak3() throws IOException{
         Path fileName = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\testbreak3.md");
+        ("testbreak3.md");
         String content = Files.readString(fileName);
         assertEquals(List.of("link2"),
         MarkdownParse.getLinks(content));      
@@ -38,19 +38,19 @@ public class MarkdownParseTest { //name of test class
     @Test
     public void testallTestFiles() throws IOException{
         Path fileName = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file2.md");
+        ("test-file2.md");
         Path fileName1 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file3.md");
+        ("test-file3.md");
         Path fileName2 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file4.md");
+        ("test-file4.md");
         Path fileName3 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file5.md");
+        ("test-file5.md");
         Path fileName4 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file6.md");
+        ("test-file6.md");
         Path fileName5 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file7.md");
+        ("test-file7.md");
         Path fileName6 = Path.of
-        ("C:\\Users\\Chan\\Documents\\GitHub\\markdown-parser\\test-file8.md");
+        ("test-file8.md");
         String content = Files.readString(fileName);
         String content2 = Files.readString(fileName1);
         String content3 = Files.readString(fileName2);
